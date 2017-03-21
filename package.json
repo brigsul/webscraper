@@ -1,0 +1,24 @@
+{
+  "name": "scraper",
+  "version": "1.0.0",
+  "description": "scrape websites using node/express/request/cheerio",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brigsul/webscraper.git"
+  },
+  "author": "brigsul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brigsul/webscraper/issues"
+  },
+  "homepage": "https://github.com/brigsul/webscraper#readme",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "express": "^4.15.2",
+    "request": "^2.81.0"
+  }
+}
