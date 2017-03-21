@@ -24,27 +24,28 @@ app.get('/scrape/', function(req, res) {
 
       // Finally, we'll define the variables we're going to capture
 
-      var position, team, points;
-      var json = { position : "", team : "", points : "" };
+      var position, team, points, table;
+      var json = { position : [], team : [], points : []};
 
       // We'll use the unique element tbody as a starting point
+      for(var i = 2; i < 22; i++) {
+        $('tbody tr:nth-child('+i+')').filter(function(){
+          var data = $(this);
 
-      $('tbody').filter(function(){
+          console.log(data);
 
-      // Let's store the data we filter into a variable so we can easily see what's going on.
+          position = data.children().first().text();
 
-        var data = $(this);
+          team = data.children().first().next().children().text();
 
-        position = data.children().first().next().children().first().text();
+          points = data.children().last().text();
 
-        team = data.children().first().next().children().first().next().children().text();
+          json.position.push(position);
+          json.team.push(team);
+          json.points.push(points);
 
-        points = data.children().first().next().children().last().text();
-
-        json.position = position;
-        json.team = team;
-        json.points = points;
-      })
+        })
+      }
     }
     
     fs.writeFile('output.json', JSON.stringify(json, null, 4), function(err){
