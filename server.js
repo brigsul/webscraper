@@ -32,8 +32,6 @@ app.get('/scrape/', function(req, res) {
         $('tbody tr:nth-child('+i+')').filter(function(){
           var data = $(this);
 
-          console.log(data);
-
           position = data.children().first().text();
 
           team = data.children().first().next().children().text();
@@ -48,11 +46,26 @@ app.get('/scrape/', function(req, res) {
       }
     }
     
-    fs.writeFile('output.json', JSON.stringify(json, null, 4), function(err){
+    var JSONstring = JSON.stringify(json, null, 4);
+
+    fs.writeFile('output.json', JSONstring, function(err){
       console.log('File successfully written');
     })
 
-    res.send('Check your console!');
+    res.sendFile('index.html', {root: __dirname })
+
+      
+    for(var j = 0; j < json.position.length; j++) {
+      var html = `
+        <tr>
+          <td>`+json.position[j]+`</td>
+          <td>`+json.team[j]+`</td> 
+          <td>` +json.points[j]+`</td>
+        </tr>
+      `;
+
+      $("tablediv table").append(html);
+    }
   })
 })
 
