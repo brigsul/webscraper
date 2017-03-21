@@ -1,0 +1,18 @@
+html
+  head
+    title Premier League Scraper And Table
+    style
+      include style.css
+  body
+    table
+      tr
+        th Pos
+        th Team
+        th Points
+      each team in json
+        tr
+          td= json.indexOf(team)+1
+          td(class='team-name')= team.team
+          td= team.points
+
+      
