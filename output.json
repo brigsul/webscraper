@@ -1,68 +1,82 @@
-{
-    "position": [
-        "1",
-        "2",
-        "3",
-        "4",
-        "5",
-        "6",
-        "7",
-        "8",
-        "9",
-        "10",
-        "11",
-        "12",
-        "13",
-        "14",
-        "15",
-        "16",
-        "17",
-        "18",
-        "19",
-        "20"
-    ],
-    "team": [
-        "Chelsea",
-        "Tottenham Hotspur",
-        "Manchester City",
-        "Liverpool",
-        "Manchester United",
-        "Arsenal",
-        "Everton",
-        "West Bromwich Albion",
-        "Stoke City",
-        "Southampton",
-        "AFC Bournemouth",
-        "West Ham United",
-        "Burnley",
-        "Watford",
-        "Leicester City",
-        "Crystal Palace",
-        "Swansea City",
-        "Hull City",
-        "Middlesbrough",
-        "Sunderland"
-    ],
-    "points": [
-        "69",
-        "59",
-        "57",
-        "56",
-        "52",
-        "50",
-        "50",
-        "43",
-        "36",
-        "33",
-        "33",
-        "33",
-        "32",
-        "31",
-        "30",
-        "28",
-        "27",
-        "24",
-        "22",
-        "20"
-    ]
-}
+[
+    {
+        "team": "Chelsea",
+        "points": "69"
+    },
+    {
+        "team": "Tottenham Hotspur",
+        "points": "59"
+    },
+    {
+        "team": "Manchester City",
+        "points": "57"
+    },
+    {
+        "team": "Liverpool",
+        "points": "56"
+    },
+    {
+        "team": "Manchester United",
+        "points": "52"
+    },
+    {
+        "team": "Arsenal",
+        "points": "50"
+    },
+    {
+        "team": "Everton",
+        "points": "50"
+    },
+    {
+        "team": "West Bromwich Albion",
+        "points": "43"
+    },
+    {
+        "team": "Stoke City",
+        "points": "36"
+    },
+    {
+        "team": "Southampton",
+        "points": "33"
+    },
+    {
+        "team": "AFC Bournemouth",
+        "points": "33"
+    },
+    {
+        "team": "West Ham United",
+        "points": "33"
+    },
+    {
+        "team": "Burnley",
+        "points": "32"
+    },
+    {
+        "team": "Watford",
+        "points": "31"
+    },
+    {
+        "team": "Leicester City",
+        "points": "30"
+    },
+    {
+        "team": "Crystal Palace",
+        "points": "28"
+    },
+    {
+        "team": "Swansea City",
+        "points": "27"
+    },
+    {
+        "team": "Hull City",
+        "points": "24"
+    },
+    {
+        "team": "Middlesbrough",
+        "points": "22"
+    },
+    {
+        "team": "Sunderland",
+        "points": "20"
+    }
+]

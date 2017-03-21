@@ -4,6 +4,10 @@ var request = require('request');
 var cheerio = require('cheerio');
 var app = express();
 
+app.set('view engine', 'pug')
+
+
+
 app.get('/scrape/', function(req, res) {
   // The url we will scrape from - in this example, ESPNFC
 
@@ -24,8 +28,8 @@ app.get('/scrape/', function(req, res) {
 
       // Finally, we'll define the variables we're going to capture
 
-      var position, team, points, table;
-      var json = { position : [], team : [], points : []};
+      var position, team, points;
+      var json = [];
 
       // We'll use the unique element tbody as a starting point
       for(var i = 2; i < 22; i++) {
@@ -38,12 +42,16 @@ app.get('/scrape/', function(req, res) {
 
           points = data.children().last().text();
 
-          json.position.push(position);
-          json.team.push(team);
-          json.points.push(points);
+          json.push({team: team, points: points});
 
+          /*
+          json[i].position.push(position);
+          json[i].team.push(team);
+          json[i].points.push(points);
+          */
         })
       }
+      res.render('index', { json: json})
     }
     
     var JSONstring = JSON.stringify(json, null, 4);
@@ -51,21 +59,19 @@ app.get('/scrape/', function(req, res) {
     fs.writeFile('output.json', JSONstring, function(err){
       console.log('File successfully written');
     })
-
-    res.sendFile('index.html', {root: __dirname })
-
-      
-    for(var j = 0; j < json.position.length; j++) {
-      var html = `
-        <tr>
-          <td>`+json.position[j]+`</td>
-          <td>`+json.team[j]+`</td> 
-          <td>` +json.points[j]+`</td>
-        </tr>
-      `;
-
-      $("tablediv table").append(html);
-    }
+    
+    /*
+    fs.readFile('output.json', 'utf8', function(err, data) {
+      var jsondata = JSON.parse(data);
+      // res.writeHead(200, {'Content-Type': 'text/plain'});
+      for(var j = 0; j < jsondata.length; j++) {
+        var myTable = (j+1)+'     '+jsondata[j].team+'     '+jsondata[j].points+'\n';
+        $('table').append(myTable);
+      }
+      res.render('index', { position: (j+1), team: json[j].team, points: json[j].points})
+    })      
+    */
+    
   })
 })
 

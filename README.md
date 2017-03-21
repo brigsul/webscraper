@@ -1,6 +1,6 @@
 # ESPN FC Premier League Table Scraper
 
-### Using Node, Express, Request, & Cheerio libraries
+### Using Node, Express, Request, & Cheerio libraries with the Pug framework
 
 While running, directs requests to localhost:8081/scrape to the ESPN FC Premier League Table in order to return a JSON object including three arrays:
 
@@ -9,6 +9,8 @@ obj.position - Team position in the table
 obj.team - Team Name
 
 obj.points - Total points to date
+
+Uses the JSON object to populate a Pug view showing the current table in text format.
 
 
 ### Array indexing
