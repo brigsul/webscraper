@@ -6,9 +6,7 @@ var app = express();
 
 app.set('view engine', 'pug')
 
-
-
-app.get('/scrape/', function(req, res) {
+app.get('/', function(req, res) {
   // The url we will scrape from - in this example, ESPNFC
 
   url = 'http://www.espnfc.us/english-premier-league/23/table';

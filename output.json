@@ -1,82 +1,82 @@
 [
     {
-        "team": "Chelsea",
-        "points": "69"
-    },
-    {
-        "team": "Tottenham Hotspur",
-        "points": "59"
-    },
-    {
-        "team": "Manchester City",
-        "points": "57"
-    },
-    {
-        "team": "Liverpool",
-        "points": "56"
-    },
-    {
         "team": "Manchester United",
-        "points": "52"
+        "points": "6"
     },
     {
-        "team": "Arsenal",
-        "points": "50"
-    },
-    {
-        "team": "Everton",
-        "points": "50"
+        "team": "Huddersfield Town",
+        "points": "6"
     },
     {
         "team": "West Bromwich Albion",
-        "points": "43"
-    },
-    {
-        "team": "Stoke City",
-        "points": "36"
-    },
-    {
-        "team": "Southampton",
-        "points": "33"
-    },
-    {
-        "team": "AFC Bournemouth",
-        "points": "33"
-    },
-    {
-        "team": "West Ham United",
-        "points": "33"
-    },
-    {
-        "team": "Burnley",
-        "points": "32"
+        "points": "6"
     },
     {
         "team": "Watford",
-        "points": "31"
+        "points": "4"
+    },
+    {
+        "team": "Manchester City",
+        "points": "4"
+    },
+    {
+        "team": "Liverpool",
+        "points": "4"
+    },
+    {
+        "team": "Southampton",
+        "points": "4"
+    },
+    {
+        "team": "Everton",
+        "points": "4"
     },
     {
         "team": "Leicester City",
-        "points": "30"
+        "points": "3"
     },
     {
-        "team": "Crystal Palace",
-        "points": "28"
+        "team": "Tottenham Hotspur",
+        "points": "3"
+    },
+    {
+        "team": "Arsenal",
+        "points": "3"
+    },
+    {
+        "team": "Chelsea",
+        "points": "3"
+    },
+    {
+        "team": "Burnley",
+        "points": "3"
+    },
+    {
+        "team": "Stoke City",
+        "points": "3"
     },
     {
         "team": "Swansea City",
-        "points": "27"
+        "points": "1"
     },
     {
-        "team": "Hull City",
-        "points": "24"
+        "team": "AFC Bournemouth",
+        "points": "0"
     },
     {
-        "team": "Middlesbrough",
-        "points": "22"
+        "team": "Newcastle United",
+        "points": "0"
     },
     {
-        "team": "Sunderland",
-        "points": "20"
+        "team": "Brighton & Hove Albion",
+        "points": "0"
+    },
+    {
+        "team": "Crystal Palace",
+        "points": "0"
+    },
+    {
+        "team": "West Ham United",
+        "points": "0"
     }
 ]
