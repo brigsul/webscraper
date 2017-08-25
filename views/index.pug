@@ -10,9 +10,9 @@ html
         th Team
         th Points
       each team in json
-        tr
+        tr(style={color: team.textColor, background: team.backgroundColor})
           td= json.indexOf(team)+1
-          td(class='team-name')= team.team
+          td= team.team
           td= team.points
 
       

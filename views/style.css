@@ -1,4 +1,7 @@
-.team-name {
+table {
+    margin: auto;
+}
+td {
     padding-left: 20px;
     padding-right: 20px;
 }

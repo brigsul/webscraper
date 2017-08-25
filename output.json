@@ -1,82 +1,122 @@
 [
     {
         "team": "Manchester United",
-        "points": "6"
+        "points": "6",
+        "backgroundColor": "red",
+        "textColor": "white"
     },
     {
         "team": "Huddersfield Town",
-        "points": "6"
+        "points": "6",
+        "backgroundColor": "blue",
+        "textColor": "white"
     },
     {
         "team": "West Bromwich Albion",
-        "points": "6"
+        "points": "6",
+        "backgroundColor": "navy",
+        "textColor": "white"
     },
     {
         "team": "Watford",
-        "points": "4"
+        "points": "4",
+        "backgroundColor": "yellow",
+        "textColor": "black"
     },
     {
         "team": "Manchester City",
-        "points": "4"
+        "points": "4",
+        "backgroundColor": "skyblue",
+        "textColor": "white"
     },
     {
         "team": "Liverpool",
-        "points": "4"
+        "points": "4",
+        "backgroundColor": "red",
+        "textColor": "white"
     },
     {
         "team": "Southampton",
-        "points": "4"
+        "points": "4",
+        "backgroundColor": "red",
+        "textColor": "white"
     },
     {
         "team": "Everton",
-        "points": "4"
+        "points": "4",
+        "backgroundColor": "royalblue",
+        "textColor": "white"
     },
     {
         "team": "Leicester City",
-        "points": "3"
+        "points": "3",
+        "backgroundColor": "royalblue",
+        "textColor": "white"
     },
     {
         "team": "Tottenham Hotspur",
-        "points": "3"
+        "points": "3",
+        "backgroundColor": "royalblue",
+        "textColor": "white"
     },
     {
         "team": "Arsenal",
-        "points": "3"
+        "points": "3",
+        "backgroundColor": "red",
+        "textColor": "white"
     },
     {
         "team": "Chelsea",
-        "points": "3"
+        "points": "3",
+        "backgroundColor": "blue",
+        "textColor": "royalblue"
     },
     {
         "team": "Burnley",
-        "points": "3"
+        "points": "3",
+        "backgroundColor": "darkred",
+        "textColor": "skyblue"
     },
     {
         "team": "Stoke City",
-        "points": "3"
+        "points": "3",
+        "backgroundColor": "red",
+        "textColor": "white"
     },
     {
         "team": "Swansea City",
-        "points": "1"
+        "points": "1",
+        "backgroundColor": "white",
+        "textColor": "black"
     },
     {
         "team": "AFC Bournemouth",
-        "points": "0"
+        "points": "0",
+        "backgroundColor": "red",
+        "textColor": "black"
     },
     {
         "team": "Newcastle United",
-        "points": "0"
+        "points": "0",
+        "backgroundColor": "white",
+        "textColor": "black"
     },
     {
         "team": "Brighton & Hove Albion",
-        "points": "0"
+        "points": "0",
+        "backgroundColor": "blue",
+        "textColor": "white"
     },
     {
         "team": "Crystal Palace",
-        "points": "0"
+        "points": "0",
+        "backgroundColor": "blue",
+        "textColor": "red"
     },
     {
         "team": "West Ham United",
-        "points": "0"
+        "points": "0",
+        "backgroundColor": "darkred",
+        "textColor": "skyblue"
     }
 ]

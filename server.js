@@ -26,7 +26,7 @@ app.get('/', function(req, res) {
 
       // Finally, we'll define the variables we're going to capture
 
-      var position, team, points;
+      var team, points, mainColor, secondColor;
       var json = [];
 
       // We'll use the unique element tbody as a starting point
@@ -34,19 +34,97 @@ app.get('/', function(req, res) {
         $('tbody tr:nth-child('+i+')').filter(function(){
           var data = $(this);
 
-          position = data.children().first().text();
-
           team = data.children().first().next().children().text();
 
           points = data.children().last().text();
 
-          json.push({team: team, points: points});
+          // Set Team Colors
+          switch (team) {
+            case "Manchester United":
+              mainColor = 'red';
+              secondColor = 'white';
+              break;
+            case "Huddersfield Town":
+              mainColor = 'blue';
+              secondColor = 'white';
+              break;
+            case "West Bromwich Albion":
+              mainColor = 'navy';
+              secondColor = 'white';
+              break;
+            case "Watford":
+              mainColor = 'yellow';
+              secondColor = 'black';
+              break;
+            case "Manchester City":
+              mainColor = 'skyblue';
+              secondColor = 'white';
+              break;
+            case "Liverpool":
+              mainColor = 'red';
+              break;
+            case "Southampton":
+              mainColor = 'red';
+              secondColor = 'white';
+              break;
+            case "Everton":
+              mainColor = 'royalblue';
+              secondColor = 'white';
+              break;
+            case "Leicester City":
+              mainColor = 'royalblue';
+              secondColor = 'white';
+              break;
+            case "Tottenham Hotspur":
+              mainColor = 'royalblue';
+              secondColor = 'white';
+              break;
+            case "Arsenal":
+              mainColor = 'red';
+              secondColor = 'white';
+              break;
+            case "Chelsea":
+              mainColor = 'blue';
+              secondColor = 'royalblue';
+              break;
+            case "Burnley":
+              mainColor = 'darkred';
+              secondColor = 'skyblue';
+              break;
+            case "Stoke City":
+              mainColor = 'red';
+              secondColor = 'white';
+              break;
+            case "Swansea City":
+              mainColor = 'white';
+              secondColor = 'black';
+              break;
+            case "AFC Bournemouth":
+              mainColor = 'red';
+              secondColor = 'black';
+              break;
+            case "Newcastle United":
+              mainColor = 'white';
+              secondColor = 'black';
+              break;
+            case "Brighton & Hove Albion":
+              mainColor = 'blue';
+              secondColor = 'white';
+              break;
+            case "Crystal Palace":
+              mainColor = 'blue';
+              secondColor = 'red';
+              break;
+            case "West Ham United":
+              mainColor = 'darkred';
+              secondColor = 'skyblue';
+              break;
+            default:
+              mainColor = 'white';
+          }
 
-          /*
-          json[i].position.push(position);
-          json[i].team.push(team);
-          json[i].points.push(points);
-          */
+          json.push({team: team, points: points, backgroundColor: mainColor, textColor: secondColor});
+
         })
       }
       res.render('index', { json: json})
@@ -56,25 +134,11 @@ app.get('/', function(req, res) {
 
     fs.writeFile('output.json', JSONstring, function(err){
       console.log('File successfully written');
-    })
-    
-    /*
-    fs.readFile('output.json', 'utf8', function(err, data) {
-      var jsondata = JSON.parse(data);
-      // res.writeHead(200, {'Content-Type': 'text/plain'});
-      for(var j = 0; j < jsondata.length; j++) {
-        var myTable = (j+1)+'     '+jsondata[j].team+'     '+jsondata[j].points+'\n';
-        $('table').append(myTable);
-      }
-      res.render('index', { position: (j+1), team: json[j].team, points: json[j].points})
-    })      
-    */
-    
+    })   
   })
 })
 
-
-app.listen('8081')
+app.listen('8081');
 
 console.log('Magic happens on port 8081');
 
